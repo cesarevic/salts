@@ -41,7 +41,8 @@ mysql:
   ports:
     # Allow client to access 3306
     - "3306:3306"
-#  volumes:
+  volumes:
+     - ./mysql/employees.sql:/docker-entrypoint-initdb.d
     # NOTE: your data will be stored in ./mysql
 #    - ./mysql:/var/lib/mysql
   environment:
